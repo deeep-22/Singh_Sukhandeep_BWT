@@ -1,23 +1,23 @@
-string = input("Inserisci una stringa: ")
-string += "$"
-print(string)
 
-rotazioni = []
+def trasforma(string):
+    string += "$"
 
-for i in range (len(string)):
-    rotazione = string[i:] + string[:i]
-    rotazioni.append(rotazione)
+    rotazioni = []
 
-print(rotazioni)
+    for i in range (len(string)):
+        rotazione = string[i:] + string[:i]
+        rotazioni.append(rotazione)
 
-n = len(rotazioni)
-temp = ""
-for i in range(n):
-    for j in range(0, n-i-1):
-        if rotazioni[j] > rotazioni[j+1]:
-            temp = rotazioni[j]
-            rotazioni[j] = rotazioni[j+1]
-            rotazioni[j+1] = temp
+    print(rotazioni)
+
+    n = len(rotazioni)
+    temp = ""
+    for i in range(n):
+        for j in range(0, n-i-1):
+            if rotazioni[j] > rotazioni[j+1]:
+                temp = rotazioni[j]
+                rotazioni[j] = rotazioni[j+1]
+                rotazioni[j+1] = temp
 
 
 

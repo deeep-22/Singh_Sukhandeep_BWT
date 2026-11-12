@@ -21,6 +21,6 @@ with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as server:
     
         messaggio = conn.recv(1024).decode()
         trasformato = trasforma(messaggio)
-        print("La trasformata di burrow wheeler della parola ", messaggio, "è: ", trasformato)
+        
 
         conn.sendall(trasformato.encode())

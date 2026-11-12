@@ -9,4 +9,4 @@ with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as client:
     client.sendall(messaggio.encode())
 
     risposta = client.recv(1024)
-    print("Risposta del server:", risposta.decode())
+    print("La trasformata di burrow wheeler della parola", messaggio, "è: ", risposta.decode())
